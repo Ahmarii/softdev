@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://ahmarii.github.io/',
+	base: 'softdev/',
 	integrations: [mdx(), sitemap()],
 });
