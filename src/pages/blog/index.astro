@@ -9,7 +9,7 @@ import FormattedDate from '../../components/FormattedDate.astro';
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
-import { getBasePath } from '../../utils/basePath';
+import { getBasePath } from '../../utils/basePath.js';
 const basePath = getBasePath();
 ---
 
