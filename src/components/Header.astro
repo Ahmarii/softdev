@@ -1,15 +1,17 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+import { getBasePath } from '../utils/basePath';
+const basePath = getBasePath();
 ---
 
 <header>
 	<nav>
-		<h2><a href="/softdev/">{SITE_TITLE}</a></h2>
+		<h2><a href=`${basePath}/`>{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/softdev/">Homee</HeaderLink>
-			<HeaderLink href="/softdev/blog">Blog</HeaderLink>
-			<HeaderLink href="/softdev/about">About</HeaderLink>
+			<HeaderLink href=`${basePath}/`>Homee</HeaderLink>
+			<HeaderLink href=`${basePath}/blog`>Blog</HeaderLink>
+			<HeaderLink href=`${basePath}/about`>About</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href="https://m.webtoo.ls/@astro" target="_blank">
