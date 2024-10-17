@@ -7,6 +7,6 @@ const isProd = process.env.NODE_ENV === 'production';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://ahmarii.github.io/',
-	base: isProd ? '/softdev/' : '/',
+	base: 'softdev/',
 	integrations: [mdx(), sitemap()],
 });
