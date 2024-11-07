@@ -52,6 +52,7 @@ const basePath = getBasePath();
 				margin-bottom: 0.5rem;
 				border-radius: 12px;
 				width: 20rem;
+				height: 11rem;
 			}
 			ul li a {
 				
@@ -95,9 +96,9 @@ const basePath = getBasePath();
 		<main>
 			<div class=" flex flex-row">
 				<div class=" w-3/6 px-5 ">
-					<h1>🧑‍🚀 Welcome to Our Journey!</h1>
+					<h1>🧑‍🚀 Welcome to My Journey!</h1>
 				
-					<p>
+					<!-- <p>
 						Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
 						template serves as a lightweight, minimally-styled starting point for anyone looking to build
 						a personal website, blog, or portfolio with Astro.
@@ -126,13 +127,14 @@ const basePath = getBasePath();
 							href="https://github.com/Charca/astro-blog-template"
 							>astro-blog-template
 						</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-					</p>
+					</p> -->
 				</div>
+				<!-- ----------------------------------------------------- -->
 				<div class=" w-3/6">
-					<h2 class="">Lastest Update</h2>
+					<h1 class="">Lastest Update</h1>
 					
 					<section>
-						<ul class="w-auto overflow-y-auto 	 max-h-[38rem]">
+						<ul class="w-auto overflow-y-auto 	 max-h-[39rem]">
 							{
 								posts.slice(0,3).map((post) => {
 									const parser = new MarkdownIt();
@@ -151,9 +153,16 @@ const basePath = getBasePath();
 									//console.log(excerpt);													
 									return(<li >
 										<a href={`${basePath}/blog/${post.slug}/`}>
-											<img width={720} height={360} src={basePath+post.data.heroImage} alt="" />
+											<img width={720} height={360} class=" object-cover" src={basePath+post.data.heroImage} alt="" />
 											<div class=" block px-5">
-												<h4 class="title">{post.data.title}</h4>
+												<h4 class="title  py-2">{post.data.title}</h4>
+												<div class="flex flex-wrap gap-1">	
+													<h5 class=" text-xs font-mono font-bold">KEYWORDS: </h5>
+													{post.data.keywords?.map(k => (
+														<h6 class=" text-xs font-mono font-bold">{k},</h6>	
+													))
+													}
+												</div>
 												{/* <p class="date">
 													<FormattedDate date={post.data.pubDate} />
 												</p> */}

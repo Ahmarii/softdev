@@ -8,7 +8,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 type Props = CollectionEntry<'blog'>['data'];
 import { getBasePath } from '../components/utils/basepath.js';
 const basePath = getBasePath();
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage , keywords} = Astro.props;
 ---
 
 <html lang="en">
@@ -68,7 +68,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				</div>
 				<div class="prose rounded-md">
 					<div class="title">
-						<div class="date">
+						<!-- <div class="date">
 							<FormattedDate date={pubDate} />
 							{
 								updatedDate && (
@@ -77,9 +77,16 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 									</div>
 								)
 							}
-						</div>
+						</div> -->
 						<h1>{title}</h1>
-						<hr />
+						<div class="m-5 flex flex-wrap gap-2 justify-center">	
+							{keywords?.map(k => (
+								<h6 class="p-2 px-3.5 bg-slate-50 text-black m-2 rounded-full outline outline-1"> {k}</h6>	
+							))
+							}
+						</div>
+						
+						<hr/>
 					</div>
 					<slot />
 				</div>
