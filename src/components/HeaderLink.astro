@@ -7,8 +7,8 @@ const { href, class: className, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
 const subpath = pathname.match(/[^\/]+/g);
-const isActive = "/softdev" + href === pathname || "/softdev" + href === '/' + subpath?.[0];
-console.log(href,isActive,pathname)
+const isActive = href === pathname || href === '/' + subpath?.[0];
+// console.log(href,isActive,pathname)
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>

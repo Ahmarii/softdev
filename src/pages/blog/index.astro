@@ -51,7 +51,7 @@ const basePath = getBasePath();
 			ul li img {
 				margin-bottom: 0.5rem;
 				border-radius: 12px;
-				width: 20rem;
+				width: 10rem;
 			}
 			ul li a {
 				
@@ -73,66 +73,17 @@ const basePath = getBasePath();
 			ul a:hover img {
 				box-shadow: var(--box-shadow);
 			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
+			
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<div class=" flex flex-row">
-				<div class=" w-3/6 px-5 ">
-					<h1>🧑‍🚀 Welcome to Our Journey!</h1>
-				
-					<p>
-						Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-						template serves as a lightweight, minimally-styled starting point for anyone looking to build
-						a personal website, blog, or portfolio with Astro.
-					</p>
-					<p>
-						This template comes with a few integrations already configured in your
-						<code>astro.config.mjs</code> file. You can customize your setup with
-						<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-						React, or Vue to your project.
-					</p>
-					<p>Here are a few ideas on how to get started with the template:</p>
-					<ul>
-						<li>Edit this page in <code>src/pages/index.astro</code></li>
-						<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-						<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-						<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-						<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-					</ul>
-					<p>
-						Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-							>read the docs
-						</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-					</p>
-					<p>
-						Looking for a blog template with a bit more personality? Check out <a
-							href="https://github.com/Charca/astro-blog-template"
-							>astro-blog-template
-						</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-					</p>
-				</div>
-				<div class=" w-3/6">
-					<h2 class="">Lastest Update</h2>
+			<div class="">
+				<div class="">
 					
 					<section>
-						<ul class="w-auto overflow-y-auto no-scrollbar max-h-[38rem]">
+						<ul class="w-auto overflow-y-auto 	 max-h-[38rem]">
 							{
 								posts.map((post) => {
 									const parser = new MarkdownIt();
@@ -150,13 +101,13 @@ const basePath = getBasePath();
 									const excerpt = `${createExcerpt(post.body).substring(0, 140)}...`;
 									//console.log(excerpt);													
 									return(<li >
-										<a href={`${basePath}/blog/${post.slug}/`}>
-											<img width={720} height={360} src={basePath+post.data.heroImage} alt="" />
+										<a class=" w-[55rem]" href={`${basePath}/blog/${post.slug}/`}>
+											<img  src={basePath+post.data.heroImage} alt="" />
 											<div class=" block px-5">
 												<h4 class="title">{post.data.title}</h4>
-												<p class="date">
+												{/* <p class="date">
 													<FormattedDate date={post.data.pubDate} />
-												</p>
+												</p> */}
 												<p class=" text-black">{excerpt}</p>
 											</div>
 
