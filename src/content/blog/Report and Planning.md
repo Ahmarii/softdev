@@ -6,5 +6,28 @@ heroImage: '/Plan.png'
 keywords: [PLAN,REPORT]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+## Project Goals
+
+The primary aim of this project is to develop a comprehensive, easy-to-use system that provides customizable ambiance control, allowing me to manage lighting, temperature, and various other factors that influence the mood of my space.
+
+## Technologies
+
+The core technologies I’ll be using for the **Ambiance Controller** project include:
+
+### Home Assistant
+- **Overview**: Home Assistant is the hub for my smart home automation, centralizing control and providing a single interface for all connected devices.
+- **Role in Project**: It will manage all devices and automations, providing a seamless user experience and enabling control over the ambiance settings.
+
+### ESPHome
+- **Overview**: ESPHome is ideal for managing and configuring devices with minimal code. I’ll be utilizing it to control various sensors and actuators throughout the house.
+- **Role in Project**: ESPHome will serve as the bridge between physical devices and the smart home system.
+
+
+### MQTT
+- **Overview**: MQTT is a lightweight messaging protocol that enables fast, efficient communication between devices.
+- **Role in Project**: I’ll use MQTT to transmit data and commands between devices, especially for battery-operated and low-power devices.
+
+### Zigbee
+- **Overview**: Zigbee is a low-power wireless standard commonly used for smart home devices.
+-
 
