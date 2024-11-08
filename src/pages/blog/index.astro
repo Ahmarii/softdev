@@ -105,8 +105,8 @@ const basePath = getBasePath();
 									const excerpt = `${createExcerpt(post.body).substring(0, 100)}...`;
 									//console.log(excerpt);													
 									return(<li >
-										<a class=" accent w-[55rem]" href={`${basePath}/blog/${post.slug}/`}>
-											<img  class=" object-cover" src={basePath+post.data.heroImage} alt="" />
+										<a class=" accent w-[55rem] p-1" href={`${basePath}/blog/${post.slug}/`}>
+											<img  class=" object-cover outline outline-1 outline-gray-300" src={basePath+post.data.heroImage} alt="" />
 											<div class=" block px-3">
 												<h4 class="title py-2">{post.data.title}</h4>
 												<div class="flex flex-wrap gap-1">	
